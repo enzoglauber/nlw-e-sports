@@ -1,5 +1,16 @@
-npx tsc --init // to create a config file of typescript
-npm i ts-node-dev -D
+cd server
+  npx tsc --init // to create a config file of typescript
+  npm i ts-node-dev prisma @types/cors -D
+  npm i @prisma/client cors
+
+  npm i cors
+  npm i @types/cors -D
+
+  npx prisma init -h // docs 
+  npx prisma init --datasource-provider SQLite
+  npx prisma migrate dev
+  npx prisma studio
+
 
 
 cd web
@@ -9,7 +20,7 @@ cd web
   // tailwind
   npm install -D tailwindcss postcss autoprefixer
   npx tailwindcss init
-  npm install --save phosphor-react
+  npm install --save phosphor-react // icons react
 
 
 cd mobile
