@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 
 import { Background } from './src/components/Background';
 import { Loading } from './src/components/Loading';
-import { Home } from './src/screens/Home';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -21,7 +21,7 @@ export default function App() {
         translucent
       />
 
-      {loaded ? <Home /> : <Loading />}
+      {loaded ? <Routes /> : <Loading />}
     </Background>
   );
 }

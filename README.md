@@ -12,6 +12,8 @@ cd server
   npx prisma studio
 
 
+/home/enzo/.nvm/versions/node/v14.20.1
+
 
 cd web
   npm create vite@latest
@@ -21,16 +23,23 @@ cd web
   npm install -D tailwindcss postcss autoprefixer
   npx tailwindcss init
   npm install --save phosphor-react // icons react
+  npm install @radix-ui/react-dialog
 
 
 cd mobile
   npm i -g expo-cli
+  npm install @react-navigation/native
+  npm install @react-navigation/native-stack //estratégia de navegação
+  npm i phosphor-react-native --save
+
   expo init esports
   expo start
 
+  npx expo install react-native-screens --npm   
   expo install expo-font @expo-google-fonts/inter
   expo install react-native-safe-area-context
   expo install expo-linear-gradient
+  expo install react-native-svg --npm 
 
 
 ### R Components Snippets
@@ -50,3 +59,4 @@ List of available Snippets. Or **⇥** means the `TAB` key.
 
 
 
+set PATH /home/enzo/.nvm/versions/node/v14.20.1/bin $PATH
