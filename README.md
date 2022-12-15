@@ -23,7 +23,8 @@ cd web
   npm install -D tailwindcss postcss autoprefixer
   npx tailwindcss init
   npm install --save phosphor-react // icons react
-  npm install @radix-ui/react-dialog
+  npm install @radix-ui/react-dialog @radix-ui/react-checkbox @radix-ui/react-toggle-group
+  npm install --save axios
 
 
 cd mobile
