@@ -1,33 +1,39 @@
-import { LinearGradient } from 'expo-linear-gradient';
-import { ImageBackground, Text, TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import { TouchableOpacity, TouchableOpacityProps, ImageBackground, ImageSourcePropType, Text } from 'react-native';
+import { LinearGradient } from "expo-linear-gradient";
 
-import { THEME } from '../../theme';
 import { styles } from './styles';
-
+import { THEME } from "../../theme";
 
 export interface GameCardProps {
   id: string;
-  url: string;
   title: string;
   _count: {
-    ads: number
+    ads: number;
   }
+  bannerUrl: string;
 }
 
-interface Props extends TouchableOpacityProps{
-  card: GameCardProps;
+interface Props extends TouchableOpacityProps {
+  data: GameCardProps;
 }
 
-export function GameCard({card, ...props}:Props) {
+export function GameCard({ data, ...rest }: Props) {
   return (
-    <TouchableOpacity style={styles.container} {...props}>
-      <ImageBackground style={styles.cover} source={{uri: card.url}}>
-        <LinearGradient colors={THEME.COLORS.FOOTER} style={styles.footer} >
+    <TouchableOpacity style={styles.container} {...rest}>
+      <ImageBackground
+        style={styles.cover}
+        source={{ uri: data.bannerUrl }}
+      >
+        <LinearGradient
+          colors={THEME.COLORS.FOOTER}
+          style={styles.footer}
+        >
           <Text style={styles.name}>
-            {card.title}
+            {data.title}
           </Text>
+
           <Text style={styles.ads}>
-            {card._count.ads} anúncios
+            {data._count.ads} anúncios
           </Text>
         </LinearGradient>
       </ImageBackground>
